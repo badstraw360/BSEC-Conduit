@@ -178,15 +178,15 @@ class BSECLibrary:
                 # If we are, test to see if we're on a ARMv8 machine.
                 if rpi_processor is 'BCM2837':
                     self.log.info('Detected architecture as ARMv8 64-Bit.')
-                    return 'Normal_version/RaspberryPI/PiThree_ArmV8-a-64bits'
+                    return 'normal_version/bin/RaspberryPI/PiThree_ArmV8-a-64bits'
                 # Then test for ARMv7.
                 elif rpi_processor is 'BCM2836':
                     self.log.info('Detected architecture as ARMv7 32-Bit.')
-                    return 'Normal_version/RaspberryPI/PiZero_ArmV6-32bits'
+                    return 'normal_version/bin/RaspberryPI/PiZero_ArmV6-32bits'
                 # Finally test for ARMv6.
                 elif rpi_processor is 'BCM2835':
                     self.log.info('Detected architecture as ARMv6 32-Bit.')
-                    return 'Normal_version/RaspberryPI/PiZero_ArmV6-32bits'
+                    return 'normal_version/bin/RaspberryPI/PiZero_ArmV6-32bits'
             # Well, I guess we're not on a Pi... Let's take a stab at it anyway!
             # Note: The underlying `RaspberryPI/Pi*` libraries will work on non-Pi
             # systems, as long as it's an ARM processor running Linux.
@@ -194,11 +194,11 @@ class BSECLibrary:
                 # Test for ARMv8.
                 if 'armv8' in machine:
                     self.log.info('Detected architecture as ARMv8 64-Bit.')
-                    return 'Normal_version/RaspberryPI/PiThree_ArmV8-a-64bits'
+                    return 'normal_version/bin/RaspberryPI/PiThree_ArmV8-a-64bits'
                 # Then we must be on a 32-Bit platform.
                 else:
                     self.log.info('Detected architecture as ARM{} 32-Bit.'.format(machine[3:]))
-                    return 'Normal_version/RaspberryPI/PiZero_ArmV6-32bits'
+                    return 'normal_version/bin/RaspberryPI/PiZero_ArmV6-32bits'
             # Catch all in case something went wrong.
             self.log.error("Encountered an unknown error trying to determine system architecture.")
             raise BSECLibraryError()
@@ -234,12 +234,12 @@ class BSECLibrary:
                             '-Wno-unused-variable',
                             '-static',
                             '-iquote{}/API'.format(src_dir),
-                            '-iquote{}/algo/bin/{}'.format(src_dir, lib_arch),
+                            '-iquote{}/algo/{}'.format(src_dir, lib_arch),
                             '-iquote{}/examples'.format(src_dir),
                             '{}/API/bme680.c'.format(src_dir),
                             '{}/examples/bsec_integration.c'.format(src_dir),
                             '{}/bsec-library.c'.format(src_dir),
-                            '-L{}/algo/bin/{}'.format(src_dir, lib_arch),
+                            '-L{}/algo/{}'.format(src_dir, lib_arch),
                             '-lalgobsec',
                             '-lm',
                             '-lrt',
