@@ -1,17 +1,10 @@
-# BSEC-Conduit Daemon for HASSIO
+# BSEC-Conduit Daemon FORK for HASSIO
 A first class Systemd process which acts as a conduit between between BSEC-Library
 and MQTT. Provides an alternative method of getting data out of an I2C connected
 Bosch BME680 sensor and into Home Assistant. Much more accurate than the native
 HA BME680 module, as it uses the Bosch Sensortec Environmental Cluster (BSEC)
 fusion library to process the raw BME680 sensor readings.
 
-Thanks to @rstoermer for `bsec_bme680.py` upon which I based this.
-(https://github.com/rstoermer/bsec_bme680_python/)
-
-## Attribution
-- BSEC-Conduit:
-    - @TimothyBrown (2018)
-    - MIT License
 
 ## Requirements
 - python-systemd
