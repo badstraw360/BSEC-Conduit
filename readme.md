@@ -1,4 +1,4 @@
-# BSEC-Conduit Daemon
+# BSEC-Conduit Daemon to work with HASSIO
 A first class Systemd process which acts as a conduit between between BSEC-Library
 and MQTT. Provides an alternative method of getting data out of an I2C connected
 Bosch BME680 sensor and into Home Assistant. Much more accurate than the native
