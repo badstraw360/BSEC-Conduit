@@ -20,6 +20,8 @@ fusion library to process the raw BME680 sensor readings.
 In this example we'll be installing into a Python venv located at `/opt/bsec` with the
 user `pi` on a recent Debian based distro (Raspbian/Hassbian). You can use any location
 and user you want, just make sure they are a member of the `i2c` group.
+
+- `sudo raspi-config > interfacing options > enable I2C
 - `sudo mkdir /opt/bsec` Create the directory.
 - `sudo chown pi:pi /opt/bsec` Change permissions on the directory.
 - `sudo -u pi git clone https://github.com/badstraw360/BSEC-Conduit.git /opt/bsec` Clone the repo into our new directory.
