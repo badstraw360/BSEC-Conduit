@@ -27,7 +27,7 @@ user `pi` on a recent Debian based distro (Raspbian/Hassbian). You can use any l
 and user you want, just make sure they are a member of the `i2c` group.
 - `sudo mkdir /opt/bsec` Create the directory.
 - `sudo chown pi:pi /opt/bsec` Change permissions on the directory.
-- `sudo -u pi git clone https://github.com/timothybrown/BSEC-Conduit.git /opt/bsec` Clone the repo into our new directory.
+- `sudo -u pi git clone https://github.com/badstraw360/BSEC-Conduit.git /opt/bsec` Clone the repo into our new directory.
 - `sudo -u pi python3 -m venv /opt/bsec` Create our venv.
 - `cd /opt/bsec` Change into the directory.
 - `source bin/activate` Activate our new venv.
