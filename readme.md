@@ -10,7 +10,7 @@ fusion library to process the raw BME680 sensor readings.
 - python-systemd
 - paho.mqtt
 
-sudo apt-get install python3-pip`
+`sudo apt-get install python3-pip`
 
 `sudo apt-get install python3-systemd python3-paho.mqtt`
   *or*
